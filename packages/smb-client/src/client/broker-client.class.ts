@@ -5,7 +5,7 @@ import {
   CommandParser,
   EventService,
   IMessageCommand,
-  ISubscribeAction,
+  IPublishAction,
   ISubscribeCommand,
   IUnsubscribeCommand,
   IWelcomeCommand,
@@ -60,7 +60,7 @@ export class BrokerClient {
     });
   }
 
-  subscribe(topic: string, listener: Listener<ISubscribeAction>): void {
+  subscribe(topic: string, listener: Listener<IPublishAction>): void {
     this.subscriptions.set(topic, listener);
     const subscription: ISubscribeCommand = {
       command: 'subscribe',

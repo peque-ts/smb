@@ -7,14 +7,14 @@ export interface ICommand<TCommand extends ICommandTypes, TAction = string> {
   issueTimestamp: number;
 }
 
-interface IMessageAction {
+export interface IMessageAction {
   topic: string;
   message: string;
 }
 
 export type IMessageCommand = ICommand<'message', IMessageAction>;
 
-interface IPublishAction {
+export interface IPublishAction {
   topic: string;
   message: string;
 }
