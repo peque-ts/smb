@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 
-import { DI, loadProviders } from '../../di';
+import { DI, loadProviders } from '../../../test/test.utils';
 import { SubscribeService } from './subscription.service';
 
 const test = suite('Subscription Service');

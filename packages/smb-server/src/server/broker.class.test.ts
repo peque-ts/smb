@@ -4,8 +4,7 @@ import * as sinon from 'sinon';
 import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 
-import { DI, loadProviders } from '../di';
-import { Broker } from './broker.class';
+import { BrokerFactory } from './broker.factory';
 import { net } from './net';
 
 const test = suite('Broker Server');
@@ -33,13 +32,11 @@ test.before.each((context) => {
     }),
   };
 
-  loadProviders();
-  context.broker = DI.get<Broker>('Broker');
+  context.broker = new BrokerFactory().createBroker();
 });
 
 test.after.each((context) => {
   context.sandbox.restore();
-  DI.unsetAll();
 });
 
 test('should create a broker server', async (context) => {
