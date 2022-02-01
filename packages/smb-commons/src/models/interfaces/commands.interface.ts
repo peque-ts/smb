@@ -21,7 +21,7 @@ interface IPublishAction {
 
 export type IPublishCommand = ICommand<'publish', IPublishAction>;
 
-interface ISubscribeAction {
+export interface ISubscribeAction {
   topic: string;
 }
 

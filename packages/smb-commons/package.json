@@ -1,6 +1,6 @@
 {
   "name": "@pequehq/smb-commons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Peque SMB Commons",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

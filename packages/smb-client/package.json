@@ -1,6 +1,6 @@
 {
   "name": "@pequehq/smb-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Peque SMB Client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
