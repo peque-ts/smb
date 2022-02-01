@@ -48,6 +48,7 @@ importers:
     dependencies:
       '@pequehq/di': 1.0.0
       '@pequehq/smb-commons': link:../smb-commons
+    devDependencies:
       '@pequehq/test': link:../test
 
   packages/smb-commons:

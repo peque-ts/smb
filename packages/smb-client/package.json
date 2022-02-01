@@ -1,6 +1,6 @@
 {
   "name": "@pequehq/smb-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Peque SMB Client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,10 +16,12 @@
   "license": "ISC",
   "dependencies": {
     "@pequehq/di": "^1.0.0",
-    "@pequehq/smb-commons": "workspace:*",
-    "@pequehq/test": "workspace:*"
+    "@pequehq/smb-commons": "workspace:*"
   },
   "engines": {
     "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@pequehq/test": "workspace:*"
   }
 }
