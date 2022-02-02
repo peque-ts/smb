@@ -43,7 +43,7 @@ importers:
   packages/integration:
     specifiers:
       '@pequehq/di': ^1.0.0
-      '@pequehq/smb-client': workspace:*
+      '@pequehq/smb-client': ^1.0.3
       '@pequehq/smb-server': workspace:*
       ts-node: ^10.4.0
     dependencies:

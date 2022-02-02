@@ -16,5 +16,5 @@ startBroker().then(async () => {
   console.log(1, idOne, 2, idTwo);
   clientOne.subscribe('^topic', (command) => console.log(command));
   clientTwo.message('topic', { test: 'message topic' });
-  setTimeout(() => clientTwo.message('topic_other', { test: 'messate topic_other' }), 100);
+  clientTwo.message('topic_other', { test: 'messate topic_other' });
 });
