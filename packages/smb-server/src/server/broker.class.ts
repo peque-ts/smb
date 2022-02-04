@@ -1,5 +1,5 @@
 import { Injectable } from '@pequehq/di';
-import { BrokerSocket, Command, EventService, SocketService } from '@pequehq/smb-commons';
+import { BrokerSocket, BufferHelperService, Command, EventService, SocketService } from '@pequehq/smb-commons';
 import { randomUUID } from 'crypto';
 import { Server } from 'net';
 
@@ -32,8 +32,10 @@ export class Broker {
   }
 
   #connectionHandler(socket: BrokerSocket): void {
+    const bufferHelperService = new BufferHelperService(this.events);
+
     socket.id = randomUUID();
-    socket.on('data', (data) => this.events.next('incomingCommand', data));
+    socket.on('data', (data) => bufferHelperService.onData(data.toString()));
     this.sockets.set(socket);
     this.events.next('welcome', {
       command: 'welcome',

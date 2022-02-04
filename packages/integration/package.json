@@ -16,13 +16,15 @@
   "license": "ISC",
   "dependencies": {
     "@pequehq/di": "^1.0.0",
-    "@pequehq/smb-client": "^1.0.3",
+    "@pequehq/test": "workspace:*",
+    "@pequehq/smb-client": "workspace:*",
     "@pequehq/smb-server": "workspace:*"
   },
   "engines": {
     "node": ">=16.0.0"
   },
   "devDependencies": {
+    "@types/node": "^17.0.8",
     "ts-node": "^10.4.0"
   }
 }

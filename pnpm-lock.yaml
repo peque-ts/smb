@@ -43,14 +43,18 @@ importers:
   packages/integration:
     specifiers:
       '@pequehq/di': ^1.0.0
-      '@pequehq/smb-client': ^1.0.3
+      '@pequehq/smb-client': workspace:*
       '@pequehq/smb-server': workspace:*
+      '@pequehq/test': workspace:*
+      '@types/node': ^17.0.8
       ts-node: ^10.4.0
     dependencies:
       '@pequehq/di': 1.0.0
       '@pequehq/smb-client': link:../smb-client
       '@pequehq/smb-server': link:../smb-server
+      '@pequehq/test': link:../test
     devDependencies:
+      '@types/node': 17.0.14
       ts-node: 10.4.0_43d2036524ce97aa8076ce68340fa9ec
 
   packages/smb-client:
@@ -220,7 +224,6 @@ packages:
 
   /@types/node/17.0.14:
     resolution: {integrity: sha512-SbjLmERksKOGzWzPNuW7fJM7fk3YXVTFiZWB/Hs99gwhk+/dnrQRPBQjPW9aO+fi1tAffi9PrwFvsmOKmDTyng==}
-    dev: false
 
   /@typescript-eslint/eslint-plugin/5.10.2_2595c2126aec4d4b6e944b931dabb4c2:
     resolution: {integrity: sha512-4W/9lLuE+v27O/oe7hXJKjNtBLnZE8tQAFpapdxwSVHqtmIoPB1gph3+ahNwVuNL37BX7YQHyGF9Xv6XCnIX2Q==}
