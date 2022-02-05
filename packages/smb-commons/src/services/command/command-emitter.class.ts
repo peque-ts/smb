@@ -1,9 +1,9 @@
 import { Injectable } from '@pequehq/di';
 
+import { BrokerSocket } from '../../models';
 import { EventService } from '../events/event.service';
 import { SocketService } from '../socket/socket.service';
 import { CommandParser } from './command-parser.class';
-import { BrokerSocket } from '../../models';
 
 @Injectable()
 export class CommandEmitter {
@@ -16,7 +16,7 @@ export class CommandEmitter {
   }
 
   init(): void {
-    this.events.on('outgoingCommand', async (data) => {
+    this.events.on('outgoingCommand', (data) => {
       try {
         const command = this.commandParser.cast(data);
         this.#writeSocket(this.sockets.get(command.socketId), this.commandParser.stringify(data));

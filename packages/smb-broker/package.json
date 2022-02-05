@@ -1,7 +1,7 @@
 {
-  "name": "@pequehq/smb-server",
+  "name": "@pequehq/smb-broker",
   "version": "1.0.0",
-  "description": "Peque SMB Server",
+  "description": "Peque SMB Broker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

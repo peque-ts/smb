@@ -1,6 +1,7 @@
 import { Injectable } from '@pequehq/di';
 import {
-  BrokerSocket, BufferHelperService,
+  BrokerSocket,
+  BufferHelperService,
   Command,
   CommandParser,
   EventService,
@@ -49,10 +50,10 @@ export class BrokerClient {
 
       this.events.on('welcome', welcomeMsg);
 
-      this.#socket.connect({ port: options?.port || 8021, host: options?.host || '127.0.0.1' }, () => {
-        const bufferHelperService = new BufferHelperService(this.events);
-        this.#socket.on('data', (data) => bufferHelperService.onData(data.toString()));
-      });
+      this.#socket.connect({ port: options?.port || 8021, host: options?.host || '127.0.0.1' });
+
+      const bufferHelperService = new BufferHelperService(this.events);
+      this.#socket.on('data', (data) => bufferHelperService.onData(data.toString()));
 
       this.#connectionTimeout = setTimeout(() => {
         this.#socket.removeAllListeners('data');

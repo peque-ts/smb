@@ -18,7 +18,7 @@
     "@pequehq/di": "^1.0.0",
     "@pequehq/test": "workspace:*",
     "@pequehq/smb-client": "workspace:*",
-    "@pequehq/smb-server": "workspace:*"
+    "@pequehq/smb-broker": "workspace:*"
   },
   "engines": {
     "node": ">=16.0.0"

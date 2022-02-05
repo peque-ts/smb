@@ -1,5 +1,5 @@
 import { BrokerClientFactory } from '@pequehq/smb-client';
-import { BrokerFactory } from '@pequehq/smb-server';
+import { BrokerFactory } from '@pequehq/smb-broker';
 
 const broker = new BrokerFactory().createBroker();
 const clientOne = new BrokerClientFactory().createClient();

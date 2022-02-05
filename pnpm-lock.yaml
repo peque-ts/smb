@@ -43,19 +43,29 @@ importers:
   packages/integration:
     specifiers:
       '@pequehq/di': ^1.0.0
+      '@pequehq/smb-broker': workspace:*
       '@pequehq/smb-client': workspace:*
-      '@pequehq/smb-server': workspace:*
       '@pequehq/test': workspace:*
       '@types/node': ^17.0.8
       ts-node: ^10.4.0
     dependencies:
       '@pequehq/di': 1.0.0
+      '@pequehq/smb-broker': link:../smb-broker
       '@pequehq/smb-client': link:../smb-client
-      '@pequehq/smb-server': link:../smb-server
       '@pequehq/test': link:../test
     devDependencies:
       '@types/node': 17.0.14
       ts-node: 10.4.0_43d2036524ce97aa8076ce68340fa9ec
+
+  packages/smb-broker:
+    specifiers:
+      '@pequehq/di': ^1.0.0
+      '@pequehq/smb-commons': workspace:*
+      '@pequehq/test': workspace:*
+    dependencies:
+      '@pequehq/di': 1.0.0
+      '@pequehq/smb-commons': link:../smb-commons
+      '@pequehq/test': link:../test
 
   packages/smb-client:
     specifiers:
@@ -74,16 +84,6 @@ importers:
       '@pequehq/test': workspace:*
     devDependencies:
       '@pequehq/di': 1.0.0
-      '@pequehq/test': link:../test
-
-  packages/smb-server:
-    specifiers:
-      '@pequehq/di': ^1.0.0
-      '@pequehq/smb-commons': workspace:*
-      '@pequehq/test': workspace:*
-    dependencies:
-      '@pequehq/di': 1.0.0
-      '@pequehq/smb-commons': link:../smb-commons
       '@pequehq/test': link:../test
 
   packages/test:
