@@ -9,7 +9,9 @@ import { Command } from './command.class';
 import { CommandEmitter } from './command-emitter.class';
 import { CommandError } from './command-error.class';
 import { CommandReceiver } from './command-receiver.class';
+
 const test = suite('Command Emitter');
+
 test.before.each((context) => {
   @Injectable()
   class CommandTest implements ICommandService {

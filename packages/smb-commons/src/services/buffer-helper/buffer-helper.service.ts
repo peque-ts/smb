@@ -6,12 +6,12 @@ export class BufferHelperService {
 
   constructor(private eventService: EventService) {}
 
-  #handleData(data: string) {
+  #handleData(data: string): void {
     this.#data = '';
     this.eventService.next('incomingCommand', data);
   }
 
-  onData(data: Buffer | string) {
+  onData(data: string): void {
     this.#data += data;
     const index = data.indexOf(this.#delimiter);
     if (index !== -1) {
