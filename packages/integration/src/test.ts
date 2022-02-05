@@ -13,7 +13,7 @@ eventEmitter.on('event', async function (data) {
 
 eventEmitter.on('out', async function (data) {
   console.log(data);
-  await wait()
+  await wait();
 });
 
 eventEmitter.emit('event', Date.now()); // 0
