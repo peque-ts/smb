@@ -1,4 +1,4 @@
-import { BrokerFactory } from './server/broker.factory';
+import { BrokerFactory } from './server';
 
 const server = new BrokerFactory().createBroker();
 
